@@ -17,7 +17,7 @@ func _ready() -> void:
 	hud.set_score_label(player_score)
 #敌人进入左侧区域时自动删除
 func _on_death_zone_area_entered(area:Area2D)->void:
-	area.die()
+	area.naturally_die()
 #敌人和玩家碰撞时,玩家扣血,敌人消失
 func _on_player_damage() -> void:
 	print('game和player信号已连接')

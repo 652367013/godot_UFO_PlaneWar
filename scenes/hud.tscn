@@ -37,6 +37,7 @@ offset_bottom = 190.0
 texture = ExtResource("3_6fi6k")
 
 [node name="health" type="Label" parent="TextureRect"]
+layout_mode = 0
 offset_left = 216.666
 offset_top = 20.0
 offset_right = 579.666
@@ -45,6 +46,7 @@ text = "3"
 label_settings = SubResource("LabelSettings_6fi6k")
 
 [node name="x_iocn" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
 offset_left = 136.667
 offset_top = 35.68
 offset_right = 225.667
