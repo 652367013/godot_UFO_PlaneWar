@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0sh26nlfnaji"]
+
+[ext_resource type="Script" uid="uid://b1uryqbr5rg3f" path="res://scenes/hud.gd" id="1_oo0fn"]
+[ext_resource type="FontFile" uid="uid://dapgg4njs2736" path="res://assets/kenney_space-shooter-redux/font/Kenney Blocks.ttf" id="2_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://vfydgke3p7im" path="res://assets/kenney_space-shooter-redux/textures/orb.png" id="3_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://dclw7goj6a4rf" path="res://assets/kenney_space-shooter-redux/PNG/UI/numeralX.png" id="4_uo2fv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6fi6k"]
+font = ExtResource("2_5ysmq")
+font_size = 50
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oo0fn")
+metadata/_edit_lock_ = true
+
+[node name="score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 375.0
+offset_bottom = 76.0
+text = "score:"
+label_settings = SubResource("LabelSettings_6fi6k")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 190.0
+texture = ExtResource("3_6fi6k")
+
+[node name="health" type="Label" parent="TextureRect"]
+offset_left = 216.666
+offset_top = 20.0
+offset_right = 579.666
+offset_bottom = 96.0
+text = "3"
+label_settings = SubResource("LabelSettings_6fi6k")
+
+[node name="x_iocn" type="TextureRect" parent="TextureRect"]
+offset_left = 136.667
+offset_top = 35.68
+offset_right = 225.667
+offset_bottom = 118.68
+scale = Vector2(0.600001, 0.600001)
+texture = ExtResource("4_uo2fv")

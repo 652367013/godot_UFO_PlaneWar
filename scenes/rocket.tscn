@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://r3073j350441"]
+
+[ext_resource type="Texture2D" uid="uid://br70nruxqg25w" path="res://assets/kenney_space-shooter-redux/textures/rocket.png" id="1_3341w"]
+[ext_resource type="Script" uid="uid://dk0gi7foitihd" path="res://scripts/rocket.gd" id="1_dkv7l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3341w"]
+radius = 8.0
+height = 60.0
+
+[node name="Rocket" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_dkv7l")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3341w")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_3341w")
+metadata/_edit_lock_ = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+metadata/_edit_lock_ = true

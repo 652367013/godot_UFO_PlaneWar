@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0gpbgwmefog0"]
+
+[ext_resource type="Script" uid="uid://pmlsusm4nv4b" path="res://scripts/enemy_spawner.gd" id="1_ks1gq"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_ks1gq")
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos1" type="Marker2D" parent="SpawnPos"]
+position = Vector2(1400, 61)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos2" type="Marker2D" parent="SpawnPos"]
+position = Vector2(1400, 186)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos3" type="Marker2D" parent="SpawnPos"]
+position = Vector2(1400, 311)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos4" type="Marker2D" parent="SpawnPos"]
+position = Vector2(1400, 436)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos5" type="Marker2D" parent="SpawnPos"]
+position = Vector2(1400, 561)
+metadata/_edit_lock_ = true
+
+[node name="SpawnPos6" type="Marker2D" parent="SpawnPos"]
+position = Vector2(1400, 686)
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

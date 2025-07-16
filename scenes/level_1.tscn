@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://brdco015fkfni"]
+
+[ext_resource type="Texture2D" uid="uid://cbfg3fmwngyni" path="res://assets/kenney_space-shooter-redux/Backgrounds/purple.png" id="1_tw77e"]
+[ext_resource type="Script" uid="uid://bgl823dsa200n" path="res://scripts/level_1.gd" id="1_xesoj"]
+[ext_resource type="PackedScene" uid="uid://7nn4l5bqt7jc" path="res://scenes/UFO.tscn" id="2_rpurj"]
+[ext_resource type="PackedScene" uid="uid://cmvfhvb6opldk" path="res://scenes/maze.tscn" id="3_3flxk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xesoj"]
+font_size = 80
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_xesoj")
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="UI/CanvasLayer"]
+z_index = -100
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tw77e")
+stretch_mode = 1
+
+[node name="START" type="Label" parent="UI"]
+z_index = -25
+offset_left = -175.0
+offset_top = -47.0
+offset_right = 64.0
+offset_bottom = 63.0
+text = "START"
+label_settings = SubResource("LabelSettings_xesoj")
+
+[node name="END" type="Label" parent="UI"]
+z_index = -25
+offset_left = 215.0
+offset_top = -574.0
+offset_right = 381.0
+offset_bottom = -464.0
+text = "END"
+label_settings = SubResource("LabelSettings_xesoj")
+
+[node name="UFO" parent="." instance=ExtResource("2_rpurj")]
+position = Vector2(-58, -41)
+speed = 250
+
+[node name="Maze" parent="." instance=ExtResource("3_3flxk")]
+
+[connection signal="body_exited" from="Maze" to="." method="_on_maze_body_exited"]
