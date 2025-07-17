@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0sh26nlfnaji"]
 
-[ext_resource type="Script" uid="uid://b1uryqbr5rg3f" path="res://scenes/hud.gd" id="1_oo0fn"]
+[ext_resource type="Script" uid="uid://b1uryqbr5rg3f" path="res://scripts/hud.gd" id="1_oo0fn"]
 [ext_resource type="FontFile" uid="uid://dapgg4njs2736" path="res://assets/kenney_space-shooter-redux/font/Kenney Blocks.ttf" id="2_5ysmq"]
 [ext_resource type="Texture2D" uid="uid://vfydgke3p7im" path="res://assets/kenney_space-shooter-redux/textures/orb.png" id="3_6fi6k"]
 [ext_resource type="Texture2D" uid="uid://dclw7goj6a4rf" path="res://assets/kenney_space-shooter-redux/PNG/UI/numeralX.png" id="4_uo2fv"]
