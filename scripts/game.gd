@@ -22,14 +22,20 @@ func _on_death_zone_area_entered(area:Area2D)->void:
 	area.naturally_die()
 #敌人和玩家碰撞时,玩家扣血,敌人消失
 func _on_player_damage() -> void:
-	print('game和player信号已连接')
 	player_health-=1
 	hud.set_health_label(player_health)
+	#玩家生命值归零,玩家死亡
 	if player_health==0:
+		#玩家死亡,移除玩家
 		player.queue_free()
+		#停顿1s
+		await get_tree().create_timer(1).timeout
+		#玩家死亡,游戏结束,生成gameover场景
 		var game_over_instance=game_over.instantiate()
 		ui.add_child(game_over_instance)
 		game_over_instance.set_score(player_score)
+		#玩家死亡后,移除敌人生成器,停止生成敌人
+		enemy_spawner.queue_free()
 		
 		
 
