@@ -24,6 +24,10 @@ func _physics_process(delta: float) -> void:
 	#if Input.is_action_pressed("move_down"):velocity.y=speed
 	# 优化后
 	velocity = Input.get_vector("move_left", "move_right", "move_up", "move_down") * speed
+	if Input.is_action_pressed("change_speed"):
+		speed=500
+	else:
+		speed=300
 	move_and_slide()
 	
 	## 原代码 
