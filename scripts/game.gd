@@ -11,7 +11,7 @@ extends Node2D
 
 var game_over:PackedScene=preload("res://scenes/game_over.tscn")
 
-
+#初始化信号,设置计分板原始状态
 func _ready() -> void:
 	death_zone.area_entered.connect(_on_death_zone_area_entered)
 	player.damage.connect(_on_player_damage)
