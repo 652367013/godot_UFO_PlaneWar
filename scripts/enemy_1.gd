@@ -11,9 +11,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	global_position.x-=enemy_speed*delta
 
-#定义敌人自然死亡
-func naturally_die():
-	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
 	die()
