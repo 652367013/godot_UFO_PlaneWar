@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://3c00rtipvm6a"]
+[gd_scene load_steps=10 format=3 uid="uid://3c00rtipvm6a"]
 
 [ext_resource type="Texture2D" uid="uid://dufn1gpv8fwru" path="res://assets/kenney_space-shooter-redux/textures/player_ship.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cutdtvuyplsfd" path="res://Game_Plane_War/scripts/player.gd" id="1_hjaqi"]
@@ -8,9 +8,32 @@
 radius = 189.0
 height = 528.0
 
+[sub_resource type="Gradient" id="Gradient_ewai6"]
+offsets = PackedFloat32Array(0.0880503, 0.496855, 0.861635)
+colors = PackedColorArray(0.788235, 0.552941, 0.337255, 0.105882, 0.953486, 0.320686, 0, 1, 0.894118, 0.290196, 0.0117647, 0.231373)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c57bo"]
+gradient = SubResource("Gradient_ewai6")
+
+[sub_resource type="Curve" id="Curve_22f66"]
+_data = [Vector2(0, 0.52809), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ttn7q"]
+curve = SubResource("Curve_22f66")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ewai6"]
 particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1, 10, 1)
+spread = 30.0
+initial_velocity_min = -200.0
+initial_velocity_max = -100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_ttn7q")
+color_ramp = SubResource("GradientTexture1D_c57bo")
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 2
@@ -32,6 +55,14 @@ metadata/_edit_lock_ = true
 [node name="ShootSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qhqgy")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(-57, 0)
+[node name="Fire1" type="GPUParticles2D" parent="."]
+position = Vector2(-39, -49)
+amount = 100
+lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_ewai6")
+
+[node name="Fire2" type="GPUParticles2D" parent="."]
+position = Vector2(-39, 50)
+amount = 100
+lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_ewai6")
