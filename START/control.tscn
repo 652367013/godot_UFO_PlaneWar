@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfrg0djbg2vqe"]
+
+[ext_resource type="Texture2D" uid="uid://cbfg3fmwngyni" path="res://assets/kenney_space-shooter-redux/Backgrounds/purple.png" id="1_kk7os"]
+[ext_resource type="FontFile" uid="uid://dapgg4njs2736" path="res://assets/kenney_space-shooter-redux/font/Kenney Blocks.ttf" id="2_r8j75"]
+[ext_resource type="Texture2D" uid="uid://u607rqbh6r3a" path="res://assets/kenney_space-shooter-redux/PNG/ufoBlue.png" id="3_kt41b"]
+[ext_resource type="Script" uid="uid://4rd3anjlw2db" path="res://START/ufo.gd" id="4_kt41b"]
+[ext_resource type="Texture2D" uid="uid://dufn1gpv8fwru" path="res://assets/kenney_space-shooter-redux/textures/player_ship.png" id="4_r8j75"]
+[ext_resource type="Script" uid="uid://blbliputlktwx" path="res://START/plane_war.gd" id="6_gcrwu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_kk7os")
+stretch_mode = 1
+
+[node name="UFO" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 161.0
+offset_top = -106.0
+offset_right = 361.0
+offset_bottom = 94.0
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_r8j75")
+theme_override_font_sizes/font_size = 30
+text = "UFO"
+icon = ExtResource("3_kt41b")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("4_kt41b")
+
+[node name="PlaneWar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 520.0
+offset_top = -160.0
+offset_right = 1120.0
+offset_bottom = 472.0
+grow_vertical = 2
+scale = Vector2(0.44, 0.44)
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_r8j75")
+theme_override_font_sizes/font_size = 70
+text = "PLANEWAR
+"
+icon = ExtResource("4_r8j75")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("6_gcrwu")

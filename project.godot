@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="UFO(只实现了走迷宫功能,后续可以开发飞机大战)"
-run/main_scene="uid://bcktdp5lk6m1a"
+run/main_scene="uid://cfrg0djbg2vqe"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

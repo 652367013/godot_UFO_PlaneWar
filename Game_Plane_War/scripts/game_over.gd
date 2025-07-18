@@ -7,9 +7,6 @@ extends Control
 func _ready() -> void:
 	button.button_down.connect(_on_button_button_down)
 	
-
-
-
 #当按钮下后,重新加载游戏场景
 func _on_button_button_down() -> void:
 	#TODO:完善功能

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://3c00rtipvm6a"]
+[gd_scene load_steps=6 format=3 uid="uid://3c00rtipvm6a"]
 
 [ext_resource type="Texture2D" uid="uid://dufn1gpv8fwru" path="res://assets/kenney_space-shooter-redux/textures/player_ship.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cutdtvuyplsfd" path="res://Game_Plane_War/scripts/player.gd" id="1_hjaqi"]
@@ -7,6 +7,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 radius = 189.0
 height = 528.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ewai6"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 2
@@ -27,3 +31,7 @@ metadata/_edit_lock_ = true
 
 [node name="ShootSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qhqgy")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-57, 0)
+process_material = SubResource("ParticleProcessMaterial_ewai6")
