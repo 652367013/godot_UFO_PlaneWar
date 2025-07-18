@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcktdp5lk6m1a"]
 
-[ext_resource type="Script" uid="uid://bd7bfph778301" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://bd7bfph778301" path="res://Game_Plane_War/scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://dmenujd7ypfhe" path="res://assets/kenney_space-shooter-redux/textures/bg.png" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://d0sh26nlfnaji" path="res://scenes/hud.tscn" id="2_iywne"]
-[ext_resource type="PackedScene" uid="uid://3c00rtipvm6a" path="res://scenes/player.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://c0gpbgwmefog0" path="res://scenes/enemy_spawner.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://d0sh26nlfnaji" path="res://Game_Plane_War/scenes/hud.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://3c00rtipvm6a" path="res://Game_Plane_War/scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c0gpbgwmefog0" path="res://Game_Plane_War/scenes/enemy_spawner.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://cosknrxyaaniq" path="res://assets/kenney_space-shooter-redux/audio/hit.wav" id="6_p57ef"]
 [ext_resource type="AudioStream" uid="uid://b2l0yiqi2c18y" path="res://assets/kenney_space-shooter-redux/audio/explode.wav" id="7_u5sy4"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cghtcf7rlk37t"]
 
-[ext_resource type="Script" uid="uid://dm81vtpj1txpu" path="res://scripts/enemy_1.gd" id="1_a1412"]
-[ext_resource type="Texture2D" uid="uid://c8u2xtb44sf1f" path="res://assets/kenney_space-shooter-redux/textures/enemy_ship.png" id="1_tcmaw"]
+[ext_resource type="Script" uid="uid://dm81vtpj1txpu" path="res://Game_Plane_War/scripts/enemy_1.gd" id="1_xu1f7"]
+[ext_resource type="Texture2D" uid="uid://c8u2xtb44sf1f" path="res://assets/kenney_space-shooter-redux/textures/enemy_ship.png" id="2_iqbol"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1412"]
 radius = 30.0
@@ -13,13 +13,13 @@ radius = 14.0357
 [node name="Enemy_1" type="Area2D"]
 collision_layer = 2
 collision_mask = 13
-script = ExtResource("1_a1412")
+script = ExtResource("1_xu1f7")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 4.71239
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_tcmaw")
+texture = ExtResource("2_iqbol")
 flip_h = true
 metadata/_edit_lock_ = true
 

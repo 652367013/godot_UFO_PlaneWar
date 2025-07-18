@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://r3073j350441"]
 
-[ext_resource type="Texture2D" uid="uid://br70nruxqg25w" path="res://assets/kenney_space-shooter-redux/textures/rocket.png" id="1_3341w"]
-[ext_resource type="Script" uid="uid://dk0gi7foitihd" path="res://scripts/rocket.gd" id="1_dkv7l"]
+[ext_resource type="Script" uid="uid://dk0gi7foitihd" path="res://Game_Plane_War/scripts/rocket.gd" id="1_h3mjj"]
+[ext_resource type="Texture2D" uid="uid://br70nruxqg25w" path="res://assets/kenney_space-shooter-redux/textures/rocket.png" id="2_5w30i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3341w"]
 radius = 8.0
@@ -11,12 +11,12 @@ height = 60.0
 scale = Vector2(0.8, 0.8)
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_dkv7l")
+script = ExtResource("1_h3mjj")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_3341w")
+texture = ExtResource("2_5w30i")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

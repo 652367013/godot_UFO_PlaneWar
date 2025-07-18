@@ -4,7 +4,7 @@ extends Node2D
 #信号,用于发射敌人的实例
 signal enemy_emit(enemy_instance)
 #使用enemy_scene保存敌人的场景
-var enemy_scene: PackedScene = preload("res://scenes/enemy_1.tscn")
+var enemy_scene: PackedScene = preload("res://Game_Plane_War/scenes/enemy_1.tscn")
 var available_spawn_positions: Array = []
 var current_spawn_count: int = 0
 #初始化随机种子,重置敌人生成点位,连接信号

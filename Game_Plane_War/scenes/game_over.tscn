@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://qkyi2nhcqh62"]
 
-[ext_resource type="Script" uid="uid://b0lubumusdtd8" path="res://scripts/game_over.gd" id="1_wqhvx"]
-[ext_resource type="FontFile" uid="uid://dapgg4njs2736" path="res://assets/kenney_space-shooter-redux/font/Kenney Blocks.ttf" id="1_xeevv"]
+[ext_resource type="Script" uid="uid://b0lubumusdtd8" path="res://Game_Plane_War/scripts/game_over.gd" id="1_6wx6p"]
+[ext_resource type="FontFile" uid="uid://dapgg4njs2736" path="res://assets/kenney_space-shooter-redux/font/Kenney Blocks.ttf" id="2_jjsyo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
 bg_color = Color(0.884354, 0.533958, 0.471092, 1)
@@ -367,7 +367,7 @@ font = SubResource("FontFile_7m3ot")
 font_size = 60
 
 [sub_resource type="LabelSettings" id="LabelSettings_v3hpu"]
-font = ExtResource("1_xeevv")
+font = ExtResource("2_jjsyo")
 font_size = 40
 
 [node name="GameOver" type="Control"]
@@ -381,7 +381,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_wqhvx")
+script = ExtResource("1_6wx6p")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -441,6 +441,6 @@ offset_bottom = -53.205
 grow_horizontal = 2
 grow_vertical = 0
 mouse_default_cursor_shape = 2
-theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_fonts/font = ExtResource("2_jjsyo")
 theme_override_font_sizes/font_size = 40
 text = "RETRY"

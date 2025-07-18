@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://brdco015fkfni"]
 
 [ext_resource type="Texture2D" uid="uid://cbfg3fmwngyni" path="res://assets/kenney_space-shooter-redux/Backgrounds/purple.png" id="1_tw77e"]
-[ext_resource type="Script" uid="uid://bgl823dsa200n" path="res://scripts/level_1.gd" id="1_xesoj"]
-[ext_resource type="PackedScene" uid="uid://7nn4l5bqt7jc" path="res://scenes/UFO.tscn" id="2_rpurj"]
-[ext_resource type="PackedScene" uid="uid://cmvfhvb6opldk" path="res://scenes/maze.tscn" id="3_3flxk"]
+[ext_resource type="Script" uid="uid://bgl823dsa200n" path="res://Game_UFO/level_1.gd" id="1_xesoj"]
+[ext_resource type="PackedScene" uid="uid://7nn4l5bqt7jc" path="res://Game_UFO/UFO.tscn" id="2_rpurj"]
+[ext_resource type="PackedScene" uid="uid://cmvfhvb6opldk" path="res://Game_UFO/maze.tscn" id="3_3flxk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xesoj"]
 font_size = 80

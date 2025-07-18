@@ -12,7 +12,7 @@ extends Node2D
 @onready var player_hurt_sound: AudioStreamPlayer = $PlayerHurtSound
 
 
-var game_over:PackedScene=preload("res://scenes/game_over.tscn")
+var game_over:PackedScene=preload("res://Game_Plane_War/scenes/game_over.tscn")
 
 #初始化信号,设置计分板原始状态
 func _ready() -> void:

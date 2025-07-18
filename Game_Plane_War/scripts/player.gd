@@ -2,7 +2,7 @@ extends CharacterBody2D
 @export var speed:=300
 #var viewport_width
 #var viewport_height
-var rocket_scene:PackedScene=preload("res://scenes/rocket.tscn")
+var rocket_scene:PackedScene=preload("res://Game_Plane_War/scenes/rocket.tscn")
 @onready var shoot_sound: AudioStreamPlayer = $ShootSound
 
 
