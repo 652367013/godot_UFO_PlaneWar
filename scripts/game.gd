@@ -8,6 +8,9 @@ extends Node2D
 @onready var enemy_spawner: Node2D = $EnemySpawner
 @onready var hud: Control = $UI/Hud
 @onready var ui: CanvasLayer = $UI
+@onready var enemy_hit_sound: AudioStreamPlayer = $EnemyHitSound
+@onready var player_hurt_sound: AudioStreamPlayer = $PlayerHurtSound
+
 
 var game_over:PackedScene=preload("res://scenes/game_over.tscn")
 
@@ -22,6 +25,7 @@ func _on_death_zone_area_entered(area:Area2D)->void:
 	area.queue_free()
 #敌人和玩家碰撞时,玩家扣血,敌人消失
 func _on_player_damage() -> void:
+	player_hurt_sound.play()
 	player_health-=1
 	hud.set_health_label(player_health)
 	#玩家生命值归零,玩家死亡
@@ -38,11 +42,12 @@ func _on_player_damage() -> void:
 		enemy_spawner.queue_free()
 		
 		
-
+#接受敌人生成器发射的信号,敌人的实例发射死亡信号
 func _on_enemy_spawner_enemy_emit(enemy_instance: Variant) -> void:
 	add_child(enemy_instance)
 	enemy_instance.died.connect(_on_enemy_died)
 #敌人死亡时,得分增加
 func _on_enemy_died():
+	enemy_hit_sound.play()
 	player_score+=100
 	hud.set_score_label(player_score)

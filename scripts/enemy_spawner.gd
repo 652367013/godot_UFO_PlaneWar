@@ -7,12 +7,12 @@ signal enemy_emit(enemy_instance)
 var enemy_scene: PackedScene = preload("res://scenes/enemy_1.tscn")
 var available_spawn_positions: Array = []
 var current_spawn_count: int = 0
-
+#初始化随机种子,重置敌人生成点位,连接信号
 func _ready():
 	randomize()
 	reset_spawn_positions()
 	timer.timeout.connect(_on_timer_timeout)
-
+#计时器信号触发
 func _on_timer_timeout():
 	#设定同时出现的敌人数量
 	set_spawn_count()
@@ -20,14 +20,14 @@ func _on_timer_timeout():
 	#生成器点位重置
 	if available_spawn_positions.size() < current_spawn_count:
 		reset_spawn_positions()
-	
+	#生成敌人
 	for i in range(current_spawn_count):
 		if available_spawn_positions.size() == 0:
 			break
 		var random_index = randi() % available_spawn_positions.size()
 		var spawn_position = available_spawn_positions[random_index]
 		#移除使用的位置,防止生成的敌人的点位重复
-		available_spawn_positions.remove_at(random_index)  # 修正：使用remove_at()
+		available_spawn_positions.remove_at(random_index)  
 		#实例化敌人,发射信号
 		var enemy_instance = enemy_scene.instantiate()
 		enemy_instance.global_position = spawn_position

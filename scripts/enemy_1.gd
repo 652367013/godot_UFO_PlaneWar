@@ -3,6 +3,7 @@ extends Area2D
 #这里信号连自己(enemy_1)的原因是信号来源时自己的子节点
 @onready var enemy_1: Area2D = $"."
 
+
 signal died
 
 func _ready() -> void:
