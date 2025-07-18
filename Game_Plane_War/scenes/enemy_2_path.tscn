@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://4uqoftmfig6v"]
+
+[ext_resource type="Script" uid="uid://rwfo4kn085xi" path="res://Game_Plane_War/scripts/enemy_2_path.gd" id="1_crrqo"]
+[ext_resource type="PackedScene" uid="uid://bqrd6vcxp1p53" path="res://Game_Plane_War/scenes/enemy_2.tscn" id="1_varlo"]
+
+[sub_resource type="Curve2D" id="Curve2D_woj8y"]
+_data = {
+"points": PackedVector2Array(232.075, -79.7203, -232.075, 79.7203, 1291, -5, 226.893, -7.54096, -226.893, 7.54096, 767.348, 601.594, 178.899, 54.009, -178.899, -54.009, 503.762, 129.123, 0, 0, 0, 0, -33, 713)
+}
+point_count = 4
+
+[node name="Enemy2Path" type="Path2D"]
+position = Vector2(-102, -3)
+scale = Vector2(1.15332, 1.02228)
+curve = SubResource("Curve2D_woj8y")
+script = ExtResource("1_crrqo")
+
+[node name="PathFollow" type="PathFollow2D" parent="."]
+position = Vector2(101.716, 495.937)
+rotation = 2.16204
+progress = 1985.92
+loop = false
+
+[node name="enemy_2" parent="PathFollow" instance=ExtResource("1_varlo")]
+rotation = 3.14159

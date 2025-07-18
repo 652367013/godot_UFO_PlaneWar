@@ -53,6 +53,8 @@ metadata/_edit_lock_ = true
 position = Vector2(1500, 623)
 metadata/_edit_lock_ = true
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="EnemyTimer1" type="Timer" parent="."]
+autostart = true
+
+[node name="EnemyTimer2" type="Timer" parent="."]
 autostart = true

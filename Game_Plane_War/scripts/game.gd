@@ -18,7 +18,8 @@ var game_over:PackedScene=preload("res://Game_Plane_War/scenes/game_over.tscn")
 func _ready() -> void:
 	death_zone.area_entered.connect(_on_death_zone_area_entered)
 	player.damage.connect(_on_player_damage)
-	enemy_spawner.enemy_emit.connect(_on_enemy_spawner_enemy_emit)
+	enemy_spawner.enemy_1_emit.connect(_on_enemy_spawner_enemy_1_emit)
+	enemy_spawner.enemy_2_emit.connect(_on_enemy_spawner_enemy_2_emit)
 	hud.set_score_label(player_score)
 #敌人进入左侧区域时自动删除
 func _on_death_zone_area_entered(area:Area2D)->void:
@@ -42,10 +43,16 @@ func _on_player_damage() -> void:
 		enemy_spawner.queue_free()
 		
 		
-#接受敌人生成器发射的信号,敌人的实例发射死亡信号
-func _on_enemy_spawner_enemy_emit(enemy_instance: Variant) -> void:
+#接受敌人生成器发射的信号,敌人1的实例发射死亡信号
+func _on_enemy_spawner_enemy_1_emit(enemy_instance: Variant) -> void:
 	add_child(enemy_instance)
 	enemy_instance.died.connect(_on_enemy_died)
+#敌人2的实例发射死亡信号(多了一个path2d,绕了一步)
+func _on_enemy_spawner_enemy_2_emit(enemy_instance: Variant) -> void:
+	print("已接受敌人2实例")
+	add_child(enemy_instance)
+	enemy_instance.enemy_2.died.connect(_on_enemy_died)
+
 #敌人死亡时,得分增加
 func _on_enemy_died():
 	enemy_hit_sound.play()

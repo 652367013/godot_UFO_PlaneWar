@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqrd6vcxp1p53"]
+
+[ext_resource type="Script" uid="uid://ba0b8uuxpy5up" path="res://Game_Plane_War/scripts/enemy_2.gd" id="1_ajevl"]
+[ext_resource type="Texture2D" uid="uid://ypngmnqxpl13" path="res://assets/kenney_space-shooter-redux/PNG/Enemies/enemyBlack1.png" id="1_v642c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajevl"]
+radius = 39.0
+height = 94.0
+
+[node name="enemy_2" type="Area2D"]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_ajevl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ajevl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_v642c")
